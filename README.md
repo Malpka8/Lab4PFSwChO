@@ -1,11 +1,11 @@
 # Sprawozdanie z labolatorium nr 4
 
-* Uruchomienie kontenera z repozytrium lokalnych obrazów: </br>
+Uruchomienie kontenera z repozytrium lokalnych obrazów: </br>
 
 ``` docker run -d -p 5000:5000 --restart always --name registry registry:2 ```
 
 
-* Budowa obrazu:
+Budowa obrazu:
 ``` 
 buildctl build 
 --frontend=gateway.v0 
@@ -32,7 +32,7 @@ buildctl build
 --import-cache type=registry,ref=localhost:5000/localrepository:Lab4
 ```
 
-* Budowa obrazu na dockerhub:
+Budowa obrazu na dockerhub:
 ```
 buildctl build 
 --frontend=gateway.v0 
